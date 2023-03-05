@@ -1,0 +1,23 @@
+Примерни тест кейсове за поръчка на продукт от Ozone.bg
+
+Scenario: Search for product "Puzzle"
+Given the user is on homepage
+When the user clicks on search field
+And enters "puzzle" word
+And clicks on the search button
+Then relevant products should be displayed on the screen
+
+Scenario: Add to basket
+Given the user is on the choosen product
+When the user clicks on the "Аdd to basket" button
+Then the choosen product should be in the basket
+
+Scenario: Go to payment options
+Given the choosen product is in the basket
+When the user clicks on "Go to payment"
+Then the payment page should display
+
+Scenario: Submit payment options
+Given the user is on the payment page with the choosen product
+When the user submits valid payment information
+Then the "Тhe order has been placed successfully" message should display
